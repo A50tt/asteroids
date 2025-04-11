@@ -48,11 +48,18 @@ def main():
 
         # Update objects
         updatable.update(dt)
-        # Draw objects
+        # Check for bullet collision with asteroids
+        for asteroid in asteroids:
+            for shot in shots:
+                if shot.is_colliding(asteroid):
+                    asteroid.split()
+
+        # Check for player collision
         for obj in asteroids:
             if player.is_colliding(obj):
                 print("Game Over!")
                 exit(0)
+        # Draw objects
         for obj in drawable:
             obj.draw(screen)
 

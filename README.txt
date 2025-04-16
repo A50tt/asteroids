@@ -1,0 +1,1 @@
+Done with the pygame library and inside an online course test, in this game you are a ship (or more specifically, an arrow) that has to destroy all asteroids before crashing with one.
